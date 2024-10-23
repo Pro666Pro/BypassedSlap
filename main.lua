@@ -2,6 +2,9 @@ wait(2)
 local Players = game:GetService("Players")
 local BoxingEvent = Events:WaitForChild("Boxing")
 local Player = Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Events = ReplicatedStorage:WaitForChild("Events")
+
 
 local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
