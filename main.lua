@@ -1,15 +1,7 @@
 wait(2)
 local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Events = ReplicatedStorage:WaitForChild("Events")
 local BoxingEvent = Events:WaitForChild("Boxing")
-local TeleportService = game:GetService("TeleportService")
-local Http = game:GetService("HttpService")
 local Player = Players.LocalPlayer
-
-local Api = "https://games.roblox.com/v1/games/"
-local _place, _id = game.PlaceId, game.JobId
-local _servers = Api .. _place .. "/servers/Public?sortOrder=Desc&limit=100"
 
 local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
