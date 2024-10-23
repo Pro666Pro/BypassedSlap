@@ -62,27 +62,5 @@ for _, player in pairs(Players:GetPlayers()) do
             }
             BoxingEvent:FireServer(unpack(args))
         end
-        task.wait(0) -- Adjust the delay as needed
-end)
-
-TextButton_2.Parent = Frame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(1, 1, 1, 1)
-TextButton_2.Size = UDim2.new(0, 50, 0, 50)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "Bypass Slap Replica"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
-TextButton_2.Draggable = true
-TextButton_2.MouseButton1Click:Connect(function()
-for i, v in pairs(workspace:GetChildren()) do
-                if v.Name:match(game.Players.LocalPlayer.Name) and v:FindFirstChild("HumanoidRootPart") then
-game.ReplicatedStorage.BoxingEvent:FireServer(v:WaitForChild("HumanoidRootPart"),true)
-            end
-        end
-task.wait()
+        task.wait(0)
 end)
